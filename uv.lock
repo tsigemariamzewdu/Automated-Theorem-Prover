@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.11"
 
 [[package]]
@@ -542,6 +542,7 @@ name = "mathematics-ai-atp"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "pantograph" },
     { name = "torch" },
     { name = "torch-geometric" },
 ]
@@ -553,6 +554,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "pantograph", git = "https://github.com/stanford-centaur/PyPantograph" },
     { name = "torch", specifier = ">=2.12.0" },
     { name = "torch-geometric", specifier = ">=2.7.0" },
 ]
@@ -934,6 +936,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/df/de/0d2b39fb4af88a025
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7a/c2/920ef838e2f0028c8262f16101ec09ebd5969864e5a64c4c05fad0617c56/packaging-26.1-py3-none-any.whl", hash = "sha256:5d9c0669c6285e491e0ced2eee587eaf67b670d94a19e94e3984a481aba6802f", size = 95831, upload-time = "2026-04-14T21:12:47.56Z" },
 ]
+
+[[package]]
+name = "pantograph"
+version = "0.3.15"
+source = { git = "https://github.com/stanford-centaur/PyPantograph#2c9fad2727c405c9976b766088ca761f14733f95" }
 
 [[package]]
 name = "pluggy"
