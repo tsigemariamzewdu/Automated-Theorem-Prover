@@ -26,12 +26,12 @@ if __package__ in {None, ""}:
     if repo_root_str not in sys.path:
         sys.path.insert(0, repo_root_str)
 
-from atp_lean_gnn.lemma_index import LemmaIndex
-from atp_lean_gnn.logger import TrainingLogger
-from atp_lean_gnn.premise_scoring import PremiseScorer, PremiseScorerConfig
-from atp_lean_gnn.premise_training import evaluate_model_with_premises, train_one_epoch_with_premises
-from atp_lean_gnn.reporting import console_print
-from atp_lean_gnn.training import build_dataloaders, load_pointer_config, load_prepared_metadata
+from maths_ai.gnn_inference.atp_lean_gnn.lemma_index import LemmaIndex
+from maths_ai.gnn_inference.atp_lean_gnn.logger import TrainingLogger
+from maths_ai.gnn_inference.atp_lean_gnn.premise_scoring import PremiseScorer, PremiseScorerConfig
+from maths_ai.gnn_inference.atp_lean_gnn.premise_training import evaluate_model_with_premises, train_one_epoch_with_premises
+from maths_ai.gnn_inference.atp_lean_gnn.reporting import console_print
+from maths_ai.gnn_inference.atp_lean_gnn.training import build_dataloaders, load_pointer_config, load_prepared_metadata
 
 
 def _create_run_dir(run_root: Path) -> Path:
@@ -78,7 +78,7 @@ def main(argv: list[str] | None = None) -> int:
     datasets, loaders = build_dataloaders(metadata, config)
 
     # Load baseline model and wrap it in TacticWithArgsClassifier
-    from atp_lean_gnn.argument_selector import TacticWithArgsClassifier
+    from maths_ai.gnn_inference.atp_lean_gnn.argument_selector import TacticWithArgsClassifier
     
     model = TacticWithArgsClassifier(
         num_node_labels=len(metadata.node_vocab),

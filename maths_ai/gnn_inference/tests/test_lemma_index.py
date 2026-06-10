@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import faiss
 
-from atp_lean_gnn.lemma_index import LemmaIndex
+from maths_ai.gnn_inference.atp_lean_gnn.lemma_index import LemmaIndex
 
 
 class TestLemmaIndex(unittest.TestCase):

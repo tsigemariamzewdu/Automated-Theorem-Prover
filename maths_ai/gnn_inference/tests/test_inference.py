@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import torch
 
-from atp_lean_gnn.inference import _top_tactic_candidates
+from maths_ai.gnn_inference.atp_lean_gnn.inference import _top_tactic_candidates
 
 
 def test_top_tactic_candidates_returns_sorted_top_k() -> None:

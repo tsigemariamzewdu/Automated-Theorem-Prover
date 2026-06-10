@@ -4,7 +4,7 @@ import shutil
 import unittest
 from pathlib import Path
 
-from atp_lean_gnn.logger import TrainingLogger
+from maths_ai.gnn_inference.atp_lean_gnn.logger import TrainingLogger
 
 
 class LoggerTests(unittest.TestCase):

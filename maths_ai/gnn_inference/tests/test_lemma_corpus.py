@@ -5,7 +5,7 @@ import unittest
 import tempfile
 from pathlib import Path
 
-from atp_lean_gnn.lemma_corpus import load_lemma_corpus, load_lemma_name_index, write_lemma_corpus, LemmaRecord
+from maths_ai.gnn_inference.atp_lean_gnn.lemma_corpus import load_lemma_corpus, load_lemma_name_index, write_lemma_corpus, LemmaRecord
 
 
 class LemmaCorpusTests(unittest.TestCase):
